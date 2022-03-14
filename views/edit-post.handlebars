@@ -1,0 +1,29 @@
+<article>
+  <a href="/dashboard" class="ms-3" style="text-decoration: none; color: rgb(2, 51, 116); font-weight: bold;"> &larr; Return to Dashboard</a>
+  <h2 class="mt-3 ms-3" style="color: rgb(2, 51, 116)">Edit Post</h2><hr>
+  <form class="edit-post-form">
+    <div class="ms-3">
+        <label for="post-title" style="font-weight: bolder;">Post Title:</label>
+        <input class="input ms-4" style="width: 20rem;" name="post-title" type="text" value="{{post.title}}" />
+    </div>
+    <div class="ms-3">
+        <label for="post-content" style="font-weight: bolder;">Post Content:</label>
+        <input class="textarea mt-2" style="width: 20rem" name="post-content" type="text" value="{{post.post_content}}" />
+    </div>
+
+    <div class="ms-3 ">
+       This post was created by you on {{format_date post.created_at}}
+      |
+      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+    </div>
+
+    <div class="mt-3 ms-3">
+      <button type="submit" class="btn text-white ms-3" style=" background-color: rgb(2, 51, 116)">Save Post</button>
+      <button type="button" class="delete-post-btn text-white btn ms-3" style=" background-color: rgb(2, 51, 116)">Delete Post</button>
+    </div>
+    
+  </form>
+</article>
+
+<script src="/js/edit-post.js"></script>
+<script src="/js/delete-post.js"></script>
