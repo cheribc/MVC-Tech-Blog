@@ -1,0 +1,15 @@
+<div class="card-header rounded ms-3" style="max-width: 50rem; background-color: rgba(4, 38, 112, 0.699);">
+  {{#each this}}
+  <section style="background-color: #e4e6ecf3;">
+
+    <div class="ms-3">
+      {{user.username}} on {{format_date created_at}}
+    </div>
+    
+    <div class="ms-3 mt-2">
+      {{comment_text}}
+    </div>
+    <hr>
+  </section>
+  {{/each}}
+</div>

@@ -1,0 +1,20 @@
+<div class="mb-4 pt-3">
+    <h2 class="title pb-4 mt-4 ms-3" style="color: rgb(2, 51, 116)">Posts</h2><hr>
+    <a href="/dashboard/create/"><button id="create-post" class="btn ms-3 p-1 rounded" style="width: 100px; color: white; background-color: rgb(2, 51, 116)">New Post</button></a>
+</div>
+
+{{#if posts.length}}
+    </div>
+        <div>
+            {{#each posts as |post|}}
+            {{> post-info post}}
+        
+            <a href="/dashboard/edit/{{post.id}}"><button class="btn text-white ms-3 p-1 rounded mt-3 mb-2" style="width: 100px; font-weight: bold; background-color: rgb(2, 51, 116)">Edit Post</button></a>
+        </div>
+    </div>
+    {{/each}}
+{{else}}
+
+<h6 class="ms-2 mt-2" style="font-weight: bold; color: rgb(2, 51, 116)">It doesn't look like you have any posts yet!</h6>
+
+{{/if}}

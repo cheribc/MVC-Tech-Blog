@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Daily Tech</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header style="background-color: rgb(2, 51, 116); padding: 55px; color: white;">
+        <nav>
+            <div>
+                <ul style="list-style: none; display: inline-flex;">
+                    <a href="/" style="text-decoration: none; color: white;"><li style="padding-left: 10px; color: white;"><button class="btn text-white rounded">Home</button></li></a>
+                    
+                    <a href="/dashboard" style="text-decoration: none; color: white;"><li style="padding-left: 10px; color: white;"><button class="btn text-white rounded">Dashboard</li></button></li></a>
+
+                    {{#if loggedIn}}
+
+                    <a style="text-decoration: none; color: white;"><li style="padding-left: 10px; color: white;"><button id="logout" class="btn text-white rounded">Log Out</button></li></a>
+
+                    {{else}}
+        
+                    <a href="/login" style="text-decoration: none; color: white;"><li style="padding-left: 10px; color: white;"><button class="btn text-white rounded">Login</button></li></a>
+                    {{/if}}
+                </ul>
+            </div>
+
+            <h2 style="color: rgb(2, 51, 116); border: 3px solid black; display: inline-block; padding: 7px; border-radius: 7px; 
+            background-color: #e4e6ecf3; box-shadow: 5px 5px rgba(4, 38, 112, 0.699); margin-left: 2.5rem">
+            The Daily Tech</h2>
+        </nav>
+    </header>
+    
+    <main style="min-height: 90vh;">
+
+   
+       
+        
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    
+      <footer style="text-align: center; background-color: rgb(2, 51, 116); color: white; position: sticky; width: 100%; margin-bottom: -16px;">
+        <div>
+            <p>
+            <a href="/" style="text-decoration: none; color: white;">HOME</a>{{#if loggedIn}} | 
+            <a href="/dashboard/" style="text-decoration: none; color: white;">DASHBOARD</a> | 
+            <a href="/dashboard/create/" style="text-decoration: none; color: white;">NEW POST</a>
+            {{else}}
+             | <a href="/login/" style="text-decoration: none; color: white;">LOGIN</a>
+            {{/if}}
+            </p>
+        </div>
+
+        <div class="row-is-full content has-text-centered">
+            <p>
+            <strong>The Daily Tech</strong> by <a href="https://github.com/cheribc" style="text-decoration: none; color: white;">Cheribc</a> | Repo:
+            <a href="https://github.com/cheribc/MVC-Tech-Blog" style="text-decoration: none; color: white;"><i class="fab fa-github"></i></a>  
+            </p>
+        </div>
+    </footer>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
