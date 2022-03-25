@@ -6,6 +6,31 @@ This application is a CMS-style blog site similar to a Wordpress site, for devel
 
 ---
 
+### How to Use:
+
+1. To start this application from the command line, run `npm install`
+
+2. Confirm that the MySQL server is turned on 
+
+3. Run `DROB DATABASE IF EXISTS blog_db;`
+And `CREATE DATABASE blog_db;`
+
+4. Return to the terminal and run `node seeds/index.js` to seed database.
+5. Run `npm start`
+6. Navigate to [http://localhost:3001/](http://localhost:3001/) in your browser
+
+---
+
+![login-page-image](./assets/login-img.png)
+
+---
+
+![recent-post-demo-img](./assets/recent-post-demo-img.png)
+
+---
+
+![New-Post-image](./assets/NewPost-img.png)
+
 ### Technology Used:
 
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?logo=express&logoColor=%2361DAFB)
@@ -25,8 +50,8 @@ This application is a CMS-style blog site similar to a Wordpress site, for devel
 - BCrypt
 - Heroku
 
-
  ---
+
 
 #### Author
 

@@ -13,10 +13,10 @@ const seedAll = async () => {
   await seedUsers();
   console.log('\n------ USERS SEEDED --------\n');
 
-  await seedUsers();
+  await seedPosts();
   console.log('\n------ POSTS SEEDED --------\n');
 
-  await seedUsers();
+  await seedComments();
   console.log('\n------ COMMENTS SEEDED --------\n');
 
   // const users = await User.bulkCreate(seedUsers, {
